@@ -1,11 +1,11 @@
-create table Theater (
+CREATE TABLE Theater (
     theaterID INT NOT NULL,
     theaterName VARCHAR(50) NOT NULL,
     zipCode char(5),
     CONSTRAINT pkTheater PRIMARY KEY (theaterID);
 )
 
-create table Movie (
+CREATE TABLE Movie (
     movieID INT NOT NULL,
     title varchar(50) NOT NULL,
     movieTime varchar(5) NOT NULL,
