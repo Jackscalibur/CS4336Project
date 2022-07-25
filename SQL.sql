@@ -2,7 +2,7 @@ CREATE TABLE Theater (
     theaterID INT NOT NULL,
     theaterName VARCHAR(50) NOT NULL,
     zipCode CHAR(5),
-    CONSTRAINT pkTheater PRIMARY KEY (theaterID);
+    CONSTRAINT pkTheater PRIMARY KEY (theaterID)
 )
 
 CREATE TABLE Movie (
@@ -15,7 +15,7 @@ CREATE TABLE Movie (
     
     movieDescription VARCHAR(500) NOT NULL,
     CONSTRAINT pkMovieID PRIMARY KEY (movieID),
-    CONSTRAINT fkTheaterID FOREIGN KEY (theaterID) REFERENCES Theater(theaterID);
+    CONSTRAINT fkTheaterID FOREIGN KEY (theaterID) REFERENCES Theater(theaterID)
 )
 
 INSERT INTO Theater (theaterID, theaterName, zipCode)
@@ -60,23 +60,23 @@ VALUES  (001, 'The Shawshank Redemption', '10AM', 142, 001, 'Framed in the 1940s
         
         (008, 'LOTR: Return of the King', '5PM', 201, 003, 'Aragorn is revealed as the heir to the ancient kings as he, Gandalf and the other members of the 
         broken fellowship struggle to save Gondor from Saurons forces. Meanwhile, Frodo and Sam bring the ring closer to the heart of Mordor, the dark 
-        lords realm.')
+        lords realm.'),
         
         (009, 'The Good, the Bad and the Ugly', '6PM', 161, 003, 'A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find 
         a fortune in gold buried in a remote cemetery.This is the third Italian-Western film of a trilogy from director Sergio Leone who gives Western 
-        films a new (bloody) color.')
+        films a new (bloody) color.'),
         
         (010, 'Fight Club', '7PM', 148, 004, 'A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new 
         form of therapy. Their concept catches on, with underground "fight clubs" forming in every town, until an eccentric gets in the way and ignites 
-        an out-of-control spiral toward oblivion.')
+        an out-of-control spiral toward oblivion.'),
         
         (011, 'LOTR: The Fellowship of the Ring', '8PM', 200, 004, 'Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must 
         leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer 
-        and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed.')
+        and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed.'),
         
         (012, 'Star Wars: Episode V', '9PM', 130, 004, 'The epic saga continues as Luke Skywalker, in hopes of defeating the evil Galactic Empire, learns the ways 
         of the Jedi from aging master Yoda. But Darth Vader is more determined than ever to capture Luke. Meanwhile, rebel leader Princess Leia, cocky Han Solo, 
-        Chewbacca, and droids C-3PO and R2-D2 are thrown into various stages of capture, betrayal and despair.')
+        Chewbacca, and droids C-3PO and R2-D2 are thrown into various stages of capture, betrayal and despair.'),
         
         (013, 'Forrest Gump', '10PM', 142, 005, 'A man with a low IQ has accomplished great things in his life and been present during significant historic events - 
         in each case, far exceeding what anyone imagined he could do. Yet, despite all the things he has attained, his one true love eludes him. "Forrest Gump" 
@@ -108,7 +108,7 @@ VALUES  (001, 'The Shawshank Redemption', '10AM', 142, 001, 'Framed in the 1940s
         (021, 'City of God', '2PM', 130, 007, 'City of God is one of the most successful Brazilian films of all times. It depicts the raw violence in the ghettos of Rio de Janeiro 
         in the 1970s that even had young kids carrying guns and joining gangs when they should be playing hide-and-seek.'),
 
-        (022, 'Se7en', '3PM', 127, 008 'Two homicide detectives are on a desperate hunt for a serial killer whose crimes are based on the "seven deadly sins" in this dark and haunting 
+        (022, 'Se7en', '3PM', 127, 008, 'Two homicide detectives are on a desperate hunt for a serial killer whose crimes are based on the "seven deadly sins" in this dark and haunting 
         film that takes viewers from the tortured remains of one victim to the next. The seasoned Det. Sommerset researches each sin in an effort to get inside the killers 
         mind, while his novice partner, Mills, scoffs at his efforts to unravel the case.'),
 
@@ -126,5 +126,4 @@ VALUES  (001, 'The Shawshank Redemption', '10AM', 142, 001, 'Framed in the 1940s
         game.'),
 
         (027, 'Leon: The Professional', '8PM', 110, 009, 'Léon, the top hit man in New York, has earned a rep as an effective "cleaner." But when his next-door neighbors are wiped out by a loose-cannon 
-        DEA agent, he becomes the unwilling custodian of 12-year-old Mathilda. Before long, Mathildas thoughts turn to revenge, and she considers following in Léons footsteps.');
-        
+        DEA agent, he becomes the unwilling custodian of 12-year-old Mathilda. Before long, Mathildas thoughts turn to revenge, and she considers following in Léons footsteps.')
