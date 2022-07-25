@@ -88,4 +88,42 @@ VALUES (001, 'The Shawshank Redemption', '10AM', 142, 001, 'Framed in the 1940s 
         (015, 'LOTR: The Two Towers', 179, 'Frodo and Sam are trekking to Mordor to destroy the One Ring of Power while Gimli, Legolas and Aragorn search for the 
         orc-captured Merry and Pippin. All along, nefarious wizard Saruman awaits the Fellowship members at the Orthanc Tower in Isengard.'),
 
-        (016)
+        (016, 'One Flew Over The Cuckoos Nest', 133, 'While serving time for insanity at a state mental hospital, implacable rabble-rouser Randle Patrick McMurphy 
+        inspires his fellow patients to rebel against the authoritarian rule of head nurse Mildred Ratched.'),
+
+        (017, 'Henry Hill is a small time gangster, who takes part in a robbery with Jimmy Conway and Tommy De Vito, two other gangsters who have set their sights 
+        a bit higher. His two partners kill off everyone else involved in the robbery, and slowly start to climb up through the hierarchy of the Mob. Henry, however, 
+        is badly affected by his partners success, but will he stoop low enough to bring about the downfall of Jimmy and Tommy?'),
+
+        (018, 'The Matrix', 136, 'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.'),
+
+        (019, 'Seven Samurai', 207, 'A veteran samurai, who has fallen on hard times, answers a villages request for protection from bandits. He gathers 6 other samurai 
+        to help him, and they teach the townspeople how to defend themselves, and they supply the samurai with three small meals a day. The film culminates in a giant 
+        battle when 40 bandits attack the village.'),
+
+        (020, 'Star Wars: Episode IV', 121, 'Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. 
+        Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore 
+        peace and justice in the Empire.'),
+
+        (021, 'City of God', 130, 'City of God is one of the most successful Brazilian films of all times. It depicts the raw violence in the ghettos of Rio de Janeiro 
+        in the 1970s that even had young kids carrying guns and joining gangs when they should be playing hide-and-seek.'),
+
+        (022, 'Se7en', 127, 'Two homicide detectives are on a desperate hunt for a serial killer whose crimes are based on the "seven deadly sins" in this dark and haunting 
+        film that takes viewers from the tortured remains of one victim to the next. The seasoned Det. Sommerset researches each sin in an effort to get inside the killers 
+        mind, while his novice partner, Mills, scoffs at his efforts to unravel the case.'),
+
+        (023, 'The Silence of the Lambs', 118, 'FBI trainee Clarice Starling ventures into a maximum-security asylum to pick the diseased brain of Hannibal Lecter, a psychiatrist 
+        turned homicidal cannibal. Starling needs clues to help her capture a serial killer. Unfortunately, her Faustian relationship with Lecter soon leads to his escape, and now 
+        two deranged killers are on the loose.'),
+
+        (024, 'Its a Wonderful Life', 130, 'An angel helps a compassionate but despairingly frustrated businessman by showing what life would had been like if he never existed.'),
+
+        (025, 'The Usual Suspects', 106, 'A boat has been destroyed, criminals are dead, and the key to this mystery lies with the only survivor and his twisted, convoluted story 
+        beginning with five career crooks in a seemingly random police lineup.'),
+
+        (026, 'Life Is Beautiful', 116, 'A touching story of an Italian book seller of Jewish ancestry who lives in his own little fairy tale. His creative and happy life would come 
+        to an abrupt halt when his entire family is deported to a concentration camp during World War II. While locked up he tries to convince his son that the whole thing is just a 
+        game.'),
+
+        (027, 'Leon: The Professional', 110, 'Léon, the top hit man in New York, has earned a rep as an effective "cleaner." But when his next-door neighbors are wiped out by a loose-cannon 
+        DEA agent, he becomes the unwilling custodian of 12-year-old Mathilda. Before long, Mathildas thoughts turn to revenge, and she considers following in Léons footsteps.');
