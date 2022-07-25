@@ -3,7 +3,7 @@ CREATE TABLE Theater (
     theaterName VARCHAR(50) NOT NULL,
     zipCode CHAR(5),
     CONSTRAINT pkTheater PRIMARY KEY (theaterID)
-)
+);
 
 CREATE TABLE Movie (
     movieID INT NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE Movie (
     movieDescription VARCHAR(500) NOT NULL,
     CONSTRAINT pkMovieID PRIMARY KEY (movieID),
     CONSTRAINT fkTheaterID FOREIGN KEY (theaterID) REFERENCES Theater(theaterID)
-)
+);
 
 INSERT INTO Theater (theaterID, theaterName, zipCode)
 VALUES  (001, 'IMAX', '75080'), 
@@ -126,4 +126,4 @@ VALUES  (001, 'The Shawshank Redemption', '10AM', 142, 001, 'Framed in the 1940s
         game.'),
 
         (027, 'Leon: The Professional', '8PM', 110, 009, 'Léon, the top hit man in New York, has earned a rep as an effective "cleaner." But when his next-door neighbors are wiped out by a loose-cannon 
-        DEA agent, he becomes the unwilling custodian of 12-year-old Mathilda. Before long, Mathildas thoughts turn to revenge, and she considers following in Léons footsteps.')
+        DEA agent, he becomes the unwilling custodian of 12-year-old Mathilda. Before long, Mathildas thoughts turn to revenge, and she considers following in Léons footsteps.');
