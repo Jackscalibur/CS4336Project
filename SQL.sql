@@ -1,25 +1,25 @@
 CREATE TABLE Theater (
     theaterID INT NOT NULL,
     theaterName VARCHAR(50) NOT NULL,
-    zipCode char(5),
+    zipCode CHAR(5),
     CONSTRAINT pkTheater PRIMARY KEY (theaterID);
 )
 
 CREATE TABLE Movie (
     movieID INT NOT NULL,
-    title varchar(50) NOT NULL,
-    movieTime varchar(5) NOT NULL,
+    title VARCHAR(50) NOT NULL,
+    movieTime VARCHAR(5) NOT NULL,
     movieDuration INT NOT NULL,
     
     theaterID INT NOT NULL, --Used to reference Theater table
     
-    movieDescription varchar(500) NOT NULL,
+    movieDescription VARCHAR(500) NOT NULL,
     CONSTRAINT pkMovieID PRIMARY KEY (movieID),
     CONSTRAINT fkTheaterID FOREIGN KEY (theaterID) REFERENCES Theater(theaterID);
 )
 
 INSERT INTO Theater (theaterID, theaterName, zipCode)
-values  (001, 'IMAX', '75080'), 
+VALUES  (001, 'IMAX', '75080'), 
         (002, 'Cinemark', '75023'), 
         (003, 'Movie Tavern', '75034'),
         (004, 'Studio Movie Grill', '75080'), 
@@ -30,7 +30,7 @@ values  (001, 'IMAX', '75080'),
         (009, 'Premiere Cinema', '75034');
 
 INSERT INTO Movie (movieID, title, movieTime, movieDuration, theaterID, movieDescription)
-VALUES (001, 'The Shawshank Redemption', '10AM', 142, 001, 'Framed in the 1940s for the double murder of his wife and her lover, 
+VALUES  (001, 'The Shawshank Redemption', '10AM', 142, 001, 'Framed in the 1940s for the double murder of his wife and her lover, 
         upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral 
         warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red 
         -- for his integrity and unquenchable sense of hope.'),
@@ -127,3 +127,4 @@ VALUES (001, 'The Shawshank Redemption', '10AM', 142, 001, 'Framed in the 1940s 
 
         (027, 'Leon: The Professional', '8PM', 110, 009, 'Léon, the top hit man in New York, has earned a rep as an effective "cleaner." But when his next-door neighbors are wiped out by a loose-cannon 
         DEA agent, he becomes the unwilling custodian of 12-year-old Mathilda. Before long, Mathildas thoughts turn to revenge, and she considers following in Léons footsteps.');
+        
