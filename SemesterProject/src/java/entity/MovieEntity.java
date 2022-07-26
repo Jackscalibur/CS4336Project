@@ -25,13 +25,13 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name= "MOVIE")
 @NamedQueries({
-    @NamedQuery (name = "Movie.findAll", query="SELECT m FROM Movie m"),
-    @NamedQuery (name = "Movie.findByMovieID", query="SELECT m FROM Movie m WHERE m.movieID = :movieID"),
-    @NamedQuery (name = "Movie.findByTitle", query = "SELECT m FROM Movie m WHERE m.movieTitle = :movieTitle"),
-    @NamedQuery (name = "Movie.findByTimes", query = "SELECT m FROM Movie m WHERE m.movieTime = :movieTime"),
-    @NamedQuery (name = "Movie.findByDuration", query = "SELECT m FROM Movie m WHERE m.movieDuration = :movieDuration"),
-    @NamedQuery (name = "Movie.findByDescription", query = "SELECT m FROM Movie m WHERE m.movieDescription = :movieDescription"),
-    @NamedQuery (name = "Movie.findByTheaterID", query = "SELECT m FROM Movie m WHERE m.theaterID = :theaterID")})
+    @NamedQuery (name = "MovieEntity.findAll", query="SELECT m FROM MovieEntity m"),
+    @NamedQuery (name = "MovieEntity.findByMovieID", query="SELECT m FROM MovieEntity m WHERE m.movieID = :movieID"),
+    @NamedQuery (name = "MovieEntity.findByTitle", query = "SELECT m FROM MovieEntity m WHERE m.movieTitle = :movieTitle"),
+    @NamedQuery (name = "MovieEntity.findByTimes", query = "SELECT m FROM MovieEntity m WHERE m.movieTime = :movieTime"),
+    @NamedQuery (name = "MovieEntity.findByDuration", query = "SELECT m FROM MovieEntity m WHERE m.movieDuration = :movieDuration"),
+    @NamedQuery (name = "MovieEntity.findByDescription", query = "SELECT m FROM MovieEntity m WHERE m.movieDescription = :movieDescription"),
+    @NamedQuery (name = "MovieEntity.findByTheaterID", query = "SELECT m FROM MovieEntity m WHERE m.theaterID = :theaterID")})
 
 public class MovieEntity implements Serializable {
 

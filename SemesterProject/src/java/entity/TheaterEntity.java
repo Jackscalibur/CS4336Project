@@ -26,10 +26,10 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "THEATER")
 @NamedQueries({
-    @NamedQuery(name = "Theater.findAll", query = "SELECT t FROM Theater t"),
-    @NamedQuery(name = "Theater.findByTheaterID", query = "SELECT t FROM Theater t WHERE t.theaterID = :theaterID"),
-    @NamedQuery(name = "Theater.findByTheatername", query = "SELECT t FROM Theater t WHERE t.theaterName = :theaterName"),
-    @NamedQuery(name = "Theater.findByZipCode", query = "SELECT t FROM Theater t WHERE t.zipCode = :zipCode")})
+    @NamedQuery(name = "TheaterEntity.findAll", query = "SELECT t FROM TheaterEntity t"),
+    @NamedQuery(name = "TheaterEntity.findByTheaterID", query = "SELECT t FROM TheaterEntity t WHERE t.theaterID = :theaterID"),
+    @NamedQuery(name = "TheaterEntity.findByTheatername", query = "SELECT t FROM TheaterEntity t WHERE t.theaterName = :theaterName"),
+    @NamedQuery(name = "TheaterEntity.findByZipCode", query = "SELECT t FROM TheaterEntity t WHERE t.zipCode = :zipCode")})
 
 public class TheaterEntity implements Serializable {
 
@@ -50,7 +50,7 @@ public class TheaterEntity implements Serializable {
     @Column(name = "ZIPCODE")
     private String zipCode;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "theaterid")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "theaterID")
     private Collection<MovieEntity> movieCollection;
     
     public TheaterEntity() {}

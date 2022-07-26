@@ -29,11 +29,11 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "PAYMENT")
 @NamedQueries({
-    @NamedQuery(name = "Payment.findAll", query = "SELECT p FROM Payment p"),
-    @NamedQuery(name = "Payment.findByPayID", query = "SELECT p FROM Payment p WHERE p.payID = :payID"),
-    @NamedQuery(name = "Payment.findByPrice", query = "SELECT p FROM Payment p WHERE p.price = :price"),
-    @NamedQuery(name = "Payment.findByPayDate", query = "SELECT p FROM Payment p WHERE p.payDate = :payDate"),
-    @NamedQuery(name = "Payment.findByCreditCardNumber", query = "SELECT p FROM Payment p WHERE p.creditCardNumber = :creditCardNumber")})
+    @NamedQuery(name = "PaymentEntity.findAll", query = "SELECT p FROM PaymentEntity p"),
+    @NamedQuery(name = "PaymentEntity.findByPayID", query = "SELECT p FROM PaymentEntity p WHERE p.payID = :payID"),
+    @NamedQuery(name = "PaymentEntity.findByPrice", query = "SELECT p FROM PaymentEntity p WHERE p.price = :price"),
+    @NamedQuery(name = "PaymentEntity.findByPayDate", query = "SELECT p FROM PaymentEntity p WHERE p.payDate = :payDate"),
+    @NamedQuery(name = "PaymentEntity.findByCreditCardNumber", query = "SELECT p FROM PaymentEntity p WHERE p.creditCardNumber = :creditCardNumber")})
 
 public class PaymentEntity implements Serializable {
 
@@ -57,7 +57,7 @@ public class PaymentEntity implements Serializable {
     @Column(name = "CREDITCARDNUMBER")
     private String creditCardNumber;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "payid")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "payID")
     private Collection<TicketEntity> ticketCollection;
 
     public PaymentEntity() {}

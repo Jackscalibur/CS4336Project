@@ -27,10 +27,10 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table(name = "TICKET")
 @NamedQueries({
-    @NamedQuery(name = "Ticket.findAll", query = "SELECT t FROM Ticket t"),
-    @NamedQuery(name = "Ticket.findByTicketID", query = "SELECT t FROM Ticket t WHERE t.ticketID = :ticketID"),
-    @NamedQuery(name = "Ticket.findBySalesDate", query = "SELECT t FROM Ticket t WHERE t.salesDate = :salesDate"),
-    @NamedQuery(name = "Ticket.findByTicketsSold", query = "SELECT t FROM Ticket t WHERE t.ticketsSold = :ticketsSold")})
+    @NamedQuery(name = "TicketEntity.findAll", query = "SELECT t FROM TicketEntity t"),
+    @NamedQuery(name = "TicketEntity.findByTicketID", query = "SELECT t FROM TicketEntity t WHERE t.ticketID = :ticketID"),
+    @NamedQuery(name = "TicketEntity.findBySalesDate", query = "SELECT t FROM TicketEntity t WHERE t.salesDate = :salesDate"),
+    @NamedQuery(name = "TicketEntity.findByTicketsSold", query = "SELECT t FROM TicketEntity t WHERE t.ticketsSold = :ticketsSold")})
 
 public class TicketEntity implements Serializable {
 
