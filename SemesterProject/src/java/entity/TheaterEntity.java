@@ -28,7 +28,7 @@ import javax.validation.constraints.Size;
 @NamedQueries({
     @NamedQuery(name = "TheaterEntity.findAll", query = "SELECT t FROM TheaterEntity t"),
     @NamedQuery(name = "TheaterEntity.findByTheaterID", query = "SELECT t FROM TheaterEntity t WHERE t.theaterID = :theaterID"),
-    @NamedQuery(name = "TheaterEntity.findByTheatername", query = "SELECT t FROM TheaterEntity t WHERE t.theaterName = :theaterName"),
+    @NamedQuery(name = "TheaterEntity.findByTheaterName", query = "SELECT t FROM TheaterEntity t WHERE t.theaterName = :theaterName"),
     @NamedQuery(name = "TheaterEntity.findByZipCode", query = "SELECT t FROM TheaterEntity t WHERE t.zipCode = :zipCode")})
 
 public class TheaterEntity implements Serializable {
@@ -118,7 +118,7 @@ public class TheaterEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.TheaterEntity[ id=" + theaterID + " ]";
+        return "entity.TheaterEntity[ theaterID=" + theaterID + " ]";
     }
     
 }

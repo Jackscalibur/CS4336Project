@@ -20,14 +20,14 @@ and open the template in the editor.
                         <h:outputText value="Select"/>             
                     </f:facet>
                     <h:commandLink value="Show Movies"
-                    action="#{movieListBean.showMovieList(theater)}">  
+                    action="#{movieListBean.showMovieList(theaterList)}">  
                     </h:commandLink>       
                 </h:column>
                 <h:column>
                     <f:facet name="header">
                         <h:outputText value="Theater"/>
                     </f:facet>
-                    <h:outputText value="#{theater.theaterName}"/>
+                    <h:outputText value="#{theaterList.theaterName}"/>
                 </h:column>
             </h:dataTable>
             <h:commandButton styleClass="backButton" value="Back"

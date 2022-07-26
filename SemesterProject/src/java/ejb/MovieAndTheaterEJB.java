@@ -28,7 +28,7 @@ public class MovieAndTheaterEJB {
 
     public List<TheaterEntity> findTheaterByZipCode(String zip) {
         return em.createNamedQuery("TheaterEntity.findByZipCode", 
-                TheaterEntity.class).setParameter("zipcode", zip).getResultList();
+                TheaterEntity.class).setParameter("zipCode", zip).getResultList();
     }
     
     public List<MovieEntity> findMovieByTheater(TheaterEntity t) {
