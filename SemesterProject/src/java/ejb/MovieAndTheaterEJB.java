@@ -5,7 +5,12 @@
  */
 package ejb;
 
+import entity.MovieEntity;
+import entity.TheaterEntity;
+import java.util.List;
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 /**
  *
@@ -14,6 +19,20 @@ import javax.ejb.Stateless;
 @Stateless
 public class MovieAndTheaterEJB {
 
-    // Add business logic below. (Right-click in editor and choose
-    // "Insert Code > Add Business Method")
+    @PersistenceContext(unitName = "SemesterProjectPU")
+    private EntityManager em;
+
+    public void persist(Object object) {
+        em.persist(object);
+    }
+
+    public List<TheaterEntity> findTheaterByZipCode(String zip) {
+        return em.createNamedQuery("TheaterEntity.findByZipCode", 
+                TheaterEntity.class).setParameter("zipcode", zip).getResultList();
+    }
+    
+    public List<MovieEntity> findMovieByTheater(TheaterEntity t) {
+        return em.createNamedQuery("MovieEntity.findByTheaterID", 
+                MovieEntity.class).setParameter("theaterID", t).getResultList();
+    }
 }
