@@ -124,6 +124,6 @@ public class TicketEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.TicketEntity[ id=" + ticketID + " ]";
+        return "entity.TicketEntity[ ticketID=" + ticketID + " ]";
     }
 }

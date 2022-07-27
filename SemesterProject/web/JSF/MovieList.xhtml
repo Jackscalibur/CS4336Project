@@ -6,11 +6,53 @@ and open the template in the editor.
 -->
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
+    <h:head>
         <title>TODO supply a title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+    </h:head>
+    <h:body>
+        <h:form styleClass="centered">
+            <h:dataTable styleClass="people" value="#{movieListBean.MovieList()}" var="movie">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText styleClass="text" value="Select" />             
+                    </f:facet>
+                    <h:commandLink value="Buy Ticket"
+                                   action="#{paymentBean.payment(movie)}">  
+                    </h:commandLink>       
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText styleClass="text" value="Title" />
+                    </f:facet>
+                    <h:outputText value="#{movie.movieTitle}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText styleClass="text" value="Starting Time" />
+                    </f:facet>
+                    <h:outputText value="#{movie.movieTime}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText styleClass="text" value="Duration" />
+                    </f:facet>
+                    <h:outputText value="#{movie.movieDuration}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText styleClass="text" value="Description" />
+                    </f:facet>
+                    <h:outputText value="#{movie.movieDescription}" />
+                </h:column>  
+            </h:dataTable>
+
+            <h:commandButton styleClass="backButton" value="Back"
+                             action="TheaterList.xhtml" />
+        </h:form>
+    </h:body>
 </html>

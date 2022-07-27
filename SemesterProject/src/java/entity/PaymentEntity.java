@@ -133,6 +133,6 @@ public class PaymentEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.PaymentEntity[ id=" + payID + " ]";
+        return "entity.PaymentEntity[ payID=" + payID + " ]";
     }
 }

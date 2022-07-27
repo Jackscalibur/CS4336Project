@@ -153,7 +153,7 @@ public class MovieEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.MovieEntity[ id=" + movieID + " ]";
+        return "entity.MovieEntity[ movieID=" + movieID + " ]";
     }
     
 }
