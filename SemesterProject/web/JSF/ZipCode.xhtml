@@ -14,12 +14,14 @@ and open the template in the editor.
         <link rel="stylesheet" href="../CSS/mystyle.css"/>
     </h:head>
     <h:body>
+        <h:outputLabel styleClass="topText">Movie Finder</h:outputLabel>
+        
         <h:form styleClass="mainForm">
-            <h:outputLabel styleClass="mainText" value="Please enter your Zip Code: "/>
+            <h:outputLabel styleClass="mainText" value="Zip Code: "/>
             <h:inputText styleClass="inputBox" value="#{zipCodeBean.zip}">
                 <f:validateLength minimum="5" maximum="5"/>
             </h:inputText>
-            <h:commandButton styleClass="buttons" value="Done!"
+            <h:commandButton styleClass="buttons" value="Submit"
             action="#{theaterListBean.showTheaterList(zipCodeBean.getZip())}"/>
         </h:form>
     </h:body>

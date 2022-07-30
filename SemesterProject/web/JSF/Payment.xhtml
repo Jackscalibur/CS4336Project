@@ -9,10 +9,12 @@ and open the template in the editor.
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
         <title>Payment</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="../CSS/mystyle.css"/>
     </h:head>
     <h:body>
-        <h:form styleClass="centered">
-            <h:panelGrid styleClass="otherText" columns="2">
+        <h:form styleClass="mainForm">
+            <h:panelGrid styleClass="people" columns="2">
                 <h:outputLabel value="Title: " />
                 <h:outputText value="#{paymentBean.movie.movieTitle}"/>
                 <h:outputLabel value="Start Time: " />
@@ -20,16 +22,18 @@ and open the template in the editor.
                 <h:outputLabel value="Price: " />
                 <h:outputText value="$10" /> 
             </h:panelGrid>
+            
+            <div class="textBoxes">
+                <h:outputText styleClass="mainText" value="Credit Card Number: "/>
+                <h:inputText styleClass="inputBox" value="#{paymentBean.creditCard}"/>
 
-            <h:outputText styleClass="mainText" value="Credit Card Number: "/>
-            <h:inputText styleClass="inputBox" value="#{paymentBean.creditCard}"/>
+                <h:commandButton styleClass="buttons" value="Done"
+                action="#{paymentBean.creditValidation()}"/> <br/>
 
-            <h:commandButton styleClass="doneButton" value="Done"
-            action="#{paymentBean.creditValidation()}"/> <br/>
+                <h:outputText styleClass="mainText" value="#{paymentBean.message}"/><br/>
+            </div>
 
-            <h:outputText styleClass="mainText" value="#{paymentBean.message}"/> <br/>
-
-            <h:commandButton styleClass="backButton" value="Back"
+            <h:commandButton styleClass="backButtonLast" value="Back"
             action="MovieList.xhtml"/>
         </h:form>
     </h:body>
