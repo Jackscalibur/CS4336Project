@@ -5,12 +5,32 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>TODO supply a title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Payment</title>
+    </h:head>
+    <h:body>
+        <h:form styleClass="centered">
+            <h:panelGrid styleClass="otherText" columns="2">
+                <h:outputLabel value="Title: " />
+                <h:outputText value="#{paymentBean.movie.movieTitle}"/>
+                <h:outputLabel value="Start Time: " />
+                <h:outputText value="#{paymentBean.movie.movieTime}"/>
+                <h:outputLabel value="Price: " />
+                <h:outputText value="$10" /> 
+            </h:panelGrid>
+
+            <h:outputText styleClass="mainText" value="Credit Card Number: "/>
+            <h:inputText styleClass="inputBox" value="#{paymentBean.creditCard}"/>
+
+            <h:commandButton styleClass="doneButton" value="Done"
+            action="#{paymentBean.creditValidation()}"/> <br/>
+
+            <h:outputText styleClass="mainText" value="#{paymentBean.message}"/> <br/>
+
+            <h:commandButton styleClass="backButton" value="Back"
+            action="MovieList.xhtml"/>
+        </h:form>
+    </h:body>
 </html>
