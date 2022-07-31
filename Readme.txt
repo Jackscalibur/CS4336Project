@@ -65,8 +65,16 @@ This is a EJB bean in which there is a persistence method, a method that will fi
 in the TheaterEntity.java page and return the resulting list, and a method that will find movies based on a theater by invoking a
 query in the MovieEntity.java page and return the resulting list.
 
-Movies.java
+MovieEntity.java
 This is an entity that was created automatically by our database MovieDB. I added a query to find movies based on the theater ID.
 
-Theaters.java
-This is an entity that was created automatically by our database MovieDB. 
+TheaterEntity.java
+This is an entity that was created automatically by our database MovieDB.
+
+PaymentEntity.java
+This is an entity that is used to host payment transaction data that will be used later for the database interactions when requesting
+from the user.
+
+TicketEntity.java
+This is an entity that is used to host ticket information that will be used later for the database interactions when requesting from the
+user.
