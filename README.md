@@ -4,13 +4,12 @@ CS 4336.0U1
 
  ## Partners:
       
-      - Jackson Cowdrey, jtc190004
-      - Rafae Ahmad, rsa190001
+* Jackson Cowdrey, jtc190004
+* Rafae Ahmad, rsa190001
       
 ## Running Process:
   
-      - To run this project, create a DB titled "MovieDB," and populate it with the SQL script provided. The username and password are
-        "scott" and "tiger."
+To run this project, create a DB titled "MovieDB," and populate it with the SQL script provided. The username and password are "scott" and "tiger."
   
 ## Front-end Web Files:
 
